@@ -1,3 +1,4 @@
+/* --------------------------- HEADER ----------------------*/
 .header {
     height: 120px;
     background-image: linear-gradient(0,#f6432e, #f5402d);
@@ -15,20 +16,25 @@
 }
 
 .header__navbar-item {
-    margin: 0 8px;
     display: inline-block;
-    font-size: 1.4rem;
     position: relative;
+
     min-height: 26px;
+    margin: 0 8px;
+
+    font-size: 1.4rem;
 }
 
+.header__navbar-item--strong {
+    font-weight: 400;
+}
 
 .header__navbar-item, 
 .header__navbar-item-link {
     display: inline-block;
-    font-size: 1.5rem;
     color: var(--white-color);
     text-decoration: none;
+    font-size: 1.5rem;
     font-weight: 300;
 }
 
@@ -47,19 +53,19 @@
 }
 
 .header__navbar-item--divider::after {
-    content: "";
     display: block;
     position: absolute;
-    border-left: 1px solid var(--white-color);
-    height: 16px;
     right: -9px;
     top: 50%;
+
+    height: 16px;
+    border-left: 1px solid var(--white-color);
+
+    content: "";
     transform: translateY(-50%);
 }
 
-.header__navbar-item--strong {
-    font-weight: 400;
-}
+
 
 .header__navbar-icon-link {
     color: var(--white-color);
@@ -76,17 +82,19 @@
     color: var(--white-color);
 }
 
-
-/* HEADER QR CODE */
+/* ---------------------- HEADER QR CODE ------------------------*/
 .header__qr {
-    background-color: var(--white-color);
-    width: 186px;
+    display: none;
     position: absolute;
     left: 15%;
     top: 118%;
+
+    width: 186px;
     padding: 8px;
+
+    background-color: var(--white-color);
     border-radius: 2px;
-    display: none;
+
     animation: fadeIn ease-in 0.3s;
 }
 
@@ -95,13 +103,14 @@
 }
 
 .header__qr::before {
-    content: "";
-    display: block;
     position: absolute;
-    width: 100%;
-    height: 18%;
     top: -16px;
     left: 0;
+    display: block;
+
+    width: 100%;
+    height: 18%;
+    content: "";
 }
 
 .header__qr-img {
@@ -125,20 +134,43 @@
     height: 16px;
 }
 
-/* NOTIFICATION */
+/* --------------------- NOTIFICATION ---------------------*/
 .header__notify {
-    position: absolute;
     display: none;
+    position: absolute;
     top: 118%;
     right: 0;
+
     width: 404px;
     background-color: var(--white-color);
     border: 1px solid #D3D3D3;
     border-radius: 2px;
+
     cursor: default;
     user-select: none;
     animation: fromCorner ease-in 0.2s;
+    will-change: opacity, transform;
     transform-origin: calc(100% - 20px) top;
+}
+
+.header__notify::before {
+    content: "";
+    border-width: 20px 26px;
+    border-style: solid;
+    border-color: transparent transparent var(--white-color) transparent;
+    position: absolute;
+    top: -29px;
+    right: 10px;
+}
+
+.header__notify::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0px;
+    top: -10px;
+    width: 180px;
+    height: 20px;
 }
 
 .header__notify--has-notify:hover .header__notify {
@@ -193,15 +225,18 @@
 
 .header__notify-name {
     display: block;
-    font-size: 1.4rem;
+    
     color: var(--text-color);
     margin-bottom: 4px;
+
+    font-size: 1.4rem;
     font-weight: 400;
     line-height: 1.8rem;
 }
 
 .header__notify-content {
     display: block;
+
     font-size: 1.2rem;
     line-height: 1.6rem;
     color: #756F6E;
@@ -212,12 +247,81 @@
 }
 
 .header__notify-footer-btn {
-    text-align: center;
-    text-decoration: none;
     width: 100%;
-    color: var(--text-color);
+
     padding: 1.2rem 1.6rem;
     margin: auto;
+    color: var(--text-color);
+
+    text-decoration: none;
+    text-align: center;
     font-size: 1.4rem;
     font-weight: 400;
+}
+
+/* ----------------- AUTHENTICATE MODAL --------- */
+.auth-form {
+    width: 500px;
+}
+.auth-form__container {
+    padding: 0 32px;
+}
+
+.auth-form__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.auth-form__heading {
+    font-size: 2.2rem;
+    font-weight: 400;
+    color: var(--text-color);
+}
+
+.auth-form__switch-btn {
+    font-size: 1.6rem;
+    color: var(--primary-color);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.auth-form__group {
+    display: flex;
+    flex-direction: column;
+}
+
+.auth-form__input {
+    height: 40px;
+    width: 100%;
+    margin-top: 1.6rem;
+    padding: 0 12px;
+    font-size: 1.4rem;
+    border: 1px solid var(--border-color);
+    border-radius: 3px;
+    outline: none;
+}
+
+.auth-form__input:focus {
+    border-color: #888;
+}
+
+.auth-form__aside {
+    margin-top: 25px;
+}
+
+.auth-form__policy-text {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    text-align: center;
+    padding: 0 8rem;
+}
+
+.auth-form__policy-link {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.auth-form__control {
+    margin-top: 82px;
 }
