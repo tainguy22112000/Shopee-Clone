@@ -1,98 +1,143 @@
 :root {
-    --primary-color: rgba(238, 77, 45, 1);
-    --white-color: #fff;
-    --black-color: #000;
-    --text-color: #333;
-    --border-color: #dbdbdb;
+	--primary-color: rgba(238, 77, 45, 1);
+	--white-color: #fff;
+	--black-color: #000;
+	--text-color: #333;
+	--border-color: #dbdbdb;
+
+	--navbar-height: 34px;
+	--header-height: 120px;
+	--header-with-search-height: calc(
+		var(--header-height) - var(--navbar-height)
+	);
 }
 
 * {
-    box-sizing: inherit;
+	box-sizing: inherit;
 }
 
 html {
-    font-size: 62.5%;
-    line-height: 1.6rem;
-    font-family: 'Roboto', sans-serif;
-    box-sizing: border-box;
+	font-size: 62.5%;
+	line-height: 1.6rem;
+	font-family: "Roboto", sans-serif;
+	box-sizing: border-box;
 }
 
 .grid {
-    width: 1200px;
-    max-width: 100%;
-    margin: 0 auto;
+	width: 1200px;
+	max-width: 100%;
+	margin: 0 auto;
 }
 
 .grid__full-width {
-    width: 100%;
+	width: 100%;
 }
 
 .grid__row {
-    display: flex;
-    flex-wrap: wrap;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 /* Animation */
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
+	from {
+		opacity: 0;
+	}
 
-    to {
-        opacity: 1;
-    }
+	to {
+		opacity: 1;
+	}
 }
 
 @keyframes fromCorner {
-    from {
-        opacity: 0;
-        transform: scale(0);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
+	from {
+		opacity: 0;
+		transform: scale(0);
+	}
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+@keyframes growth {
+	from {
+		transform: scale(var(--growth-from));
+	}
+
+	to {
+		transform: scale(var(--growth-to));
+	}
 }
 
 /* ------------------- MODAL ------------------ */
 .modal {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: flex;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: flex;
+	animation: fadeIn linear 0.2s;
 }
 
 .modal__overplay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
+	position: absolute;
+	width: 100%;
+	height: 100%;
 
-    background-color: rgba(0, 0, 0, 0.3);
+	background-color: rgba(0, 0, 0, 0.3);
 }
 
 .modal__body {
-    position: relative;
-    margin: auto;
-    z-index: 1;
+	--growth-from: 0.7;
+	--growth-to: 1;
 
-    background-color: var(--white-color);
-    border-radius: 5px;
+	position: relative;
+	margin: auto;
+	z-index: 1;
+
+	background-color: var(--white-color);
+	border-radius: 5px;
+
+	animation: growth linear 0.1s;
 }
 
 /* ----------------- BUTTON --------------------- */
 .btn {
-    height: 38px;
-    min-width: 142px;
-    text-decoration: none;
-    border: none;
-    border-radius: 3px;
-    font-size: 1.4rem;
-    padding: 0px;
+	height: 38px;
+	min-width: 142px;
+	text-decoration: none;
+	border: none;
+	border-radius: 3px;
+	font-size: 1.4rem;
+	padding: 0 12px;
+	cursor: pointer;
+	color: var(--text-color);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.btn.btm--size-s {
+	height: 32px;
+	display: flex;
+	font-size: 1.2rem;
+	padding: 8px;
+}
+
+.btn.btn--normal:hover {
+	background-color: rgba(0, 0, 0, 0.1);
 }
 
 .btn.btn--primary {
-    background-color: var(--primary-color);
-    color: var(--white-color);
+	background-color: var(--primary-color);
+	color: var(--white-color);
+	margin-left: 3px;
+}
+
+.btn.btn--disabled {
+	color: #949494;
+	cursor: default;
+	background-color: #c3c3c3;
 }
