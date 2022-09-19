@@ -124,14 +124,26 @@
           </div>
 
           <div class="header__search">
-            <input type="text" class="header__search-input" placeholder="Nhập để tìm kiếm sản phẩm">
+            <div class="header__search-input-wrap">
+                <input type="text" class="header__search-input" placeholder="Nhập để tìm kiếm sản phẩm">
+                <!------------- SEARCH HISTORY --------------- -->
+                <div class="header__search-history">
+                    <h3 class="header__search-history-heading">Lịch sử tìm kiếm</h3>
+                    <ul class="header__search-history-list">
+                        <li class="header__search-history-item"><a href="">Bàn phím</a></li>
+                        <li class="header__search-history-item"><a href="">Chuột máy tính</a></li>
+                        <li class="header__search-history-item"><a href="">Tai nghe</a></li>
+                    </ul>
+                </div>
+            </div>
 
             <div class="header__search-select">
               <span class="header__search-select-label">Trong shop
               </span>
               <i class="header__search-select-icon fa-solid fa-chevron-down"></i>
+              
               <ul class="header__search-option">
-                <li class="header__search-option-item">
+                <li class="header__search-option-item header__search-option-item--active">
                   <span>Trong shop</span>
                   <i class="fa-solid fa-check"></i>
                 </li>
@@ -140,15 +152,24 @@
                   <i class="fa-solid fa-check"></i>
                 </li>
               </ul>
-              <button class="header__search-btn">
-                <i class="header__search-btn-icon fa-sharp fa-solid fa-magnifying-glass"></i>
-              </button>
+
             </div>
+            <button class="header__search-btn">
+              <i class="header__search-btn-icon fa-sharp fa-solid fa-magnifying-glass"></i>
+            </button>
           </div>
 
+          <!-- ----------- CART LAYOUT ----------- -->
           <div class="header__cart">
             <div class="header__cart-icon">
               <i class="fa-solid fa-cart-shopping"></i>
+
+              <div class="header__cart-list header__cart-list--no-cart">
+                <img src="./assets/img/no-cart.png" alt="Empty Cart" class="header__cart-no-cart-img">
+                <span class="header__cart-no-cart-text">
+                    Chưa có sản phẩm nào
+                </span>
+              </div>
             </div>
           </div>
 
