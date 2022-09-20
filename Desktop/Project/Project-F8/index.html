@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="./assets/css/main.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" type="image/x-icon" href="./assets/img/shopee-icon.svg">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./assets/font/fontawesome-free-6.2.0-web/fontawesome-free-6.2.0-web/css/all.min.css">
 </head>
@@ -105,8 +106,27 @@
                 Trợ giúp
               </a>
             </li>
-            <li class="header__navbar-item header__navbar-item--strong header__navbar-item--divider">Đăng ký</li>
-            <li class="header__navbar-item header__navbar-item--strong">Đăng nhập</li>  
+            <!-- <li class="header__navbar-item header__navbar-item--strong header__navbar-item--divider">Đăng ký</li>
+            <li class="header__navbar-item header__navbar-item--strong">Đăng nhập</li>   -->
+            <li class="header__navbar-item header__navbar-user">
+                <img src="https://cdn-icons-png.flaticon.com/512/1053/1053244.png?w=360" alt="" class="header__navbar-user-img">
+                <span class="header__navbar-user-name">Jayden Nguy</span>
+
+                <ul class="header__navbar-user-menu">
+                    <li class="header__navbar-user-item">
+                        <a href="" class="">Tài khoản của tôi</a>
+                    </li>
+                    <li class="header__navbar-user-item">
+                        <a href="" class="">Địa chỉ của tôi</a>
+                    </li>
+                    <li class="header__navbar-user-item">
+                        <a href="" class="">Đơn mua</a>
+                    </li>
+                    <li class="header__navbar-user-item">
+                        <a href="" class="">Đăng xuất</a>
+                    </li>
+                </ul>
+            </li>
         </ul>
         </nav>
 
@@ -161,9 +181,10 @@
 
           <!-- ----------- CART LAYOUT ----------- -->
           <div class="header__cart">
-            <div class="header__cart-icon">
-              <i class="fa-solid fa-cart-shopping"></i>
-
+            <div class="header__cart-wrap">
+              <i class="header__cart-icon fa-solid fa-cart-shopping"></i>
+              <span class="header__cart-notice">3</span>
+                
               <div class="header__cart-list header__cart-list--no-cart">
                 <img src="./assets/img/no-cart.png" alt="Empty Cart" class="header__cart-no-cart-img">
                 <span class="header__cart-no-cart-text">
