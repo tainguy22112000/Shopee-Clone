@@ -200,7 +200,7 @@
 
     <div class="app__container">
       <div class="grid">
-        <div class="grid__row">
+        <div class="grid__row app__content">
           <div class="grid__column-2">
             <nav class="category">
               <h3 class="category__heading">
@@ -240,30 +240,87 @@
               </ul>
             </nav>
           </div>
+
           <div class="grid__column-10">
             <div class="home-filter">
               <span class="home-filter__label">Sort by</span>
-              <button class="btn btn--primary">Popular</button>
-              <button class="btn">Latest</button>
-              <button class="btn">Top Sales</button>
+              <button class="home-filter__btn btn btn--primary">Popular</button>
+              <button class="home-filter__btn btn">Latest</button>
+              <button class="home-filter__btn btn">Top Sales</button>
 
               <div class="select-input">
                 <span class="select-input__label">Price</span>
                 <i class="fa-solid fa-chevron-down"></i>
+                <!-- ------ LIST OPTIONS ------------ -->
+                <ul class="select-input__list">
+                  <li class="select-input__items">
+                    <a href="" class="select-input__link">Price: Low to High</a>
+                  </li>
+                  <li class="select-input__items">
+                    <a href="" class="select-input__link">Price: High to Low</a>
+                  </li>
+                </ul>
               </div>
 
               <div class="home-filter__page">
                 <span class="home-filter__page-num">
-                  <span class="home-filter__page-current">1</span>
-                  /14
+                  <span class="home-filter__page-current">1</span>/14
                 </span>
-                <div class="home-filter__page-control">
-                  <a href="" class="home-filter__page-control-back"></a>
-                </div>
 
+                <div class="home-filter__page-control">
+                  <a href="" class="home-filter__page-btn home-filter__page-btn-disabled">
+                    <i class="home-filter__page-icon fa-solid fa-chevron-left"></i>
+                  </a>
+                  <a href="" class="home-filter__page-btn">
+                    <i class="home-filter__page-icon fa-solid fa-chevron-right"></i>
+                  </a>
+                </div>
               </div>
 
 
+            </div>
+
+            <div class="home-product">
+              <div class="grid__row">
+                <div class="grid__column-2">
+                  <!-- -------- PRODUCT ITEM ---------- -->
+                  <div class="home-product-item">
+                    <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/04d67bfffa51ade9a896ed38df239c0d);">
+                      <h4 class="home-product-item__name">Lorem ipsum dolor sit amet consectetur adipisicing </h4>
+                      <div class="home-product-item__price">
+                        <span class="home-product-item__price-old">1.200.000 vnd</span>
+                        <span class="home-product-item__price-current">900.000 vnd</span>
+                      </div>
+
+                      <div class="home-product-item__action">
+                        <span class="home-product-item__action-like">
+                          <i class="fa-regular fa-heart"></i>
+                        </span>
+                        <div class="home-product-item__rating">
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </div>
+                      </div>
+
+                      <div class="home-product-item__origin">
+                        <span class="home-product-item__brand">Whoo</span>
+                        <span class="home-product-item__origin-name">Japan</span>
+                      </div>
+                      <div class="home-product-item__favourite">
+                        <i class="fa-solid fa-check"></i>
+                        Favourite
+                      </div>
+
+                      <div class="home-product-item__sale-off">
+                        <span class="home-product-item__percent">10%</span>
+                      </div>
+                    </div> 
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
