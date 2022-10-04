@@ -191,7 +191,6 @@
 
 .header__qr-link {
 	text-decoration: none;
-	
 }
 
 .header__qr-link:nth-child(2) {
@@ -1038,4 +1037,158 @@ i.home-product-item__action-like-icon-fill {
 	color: var(--white-color);
 	font-size: 1.3rem;
 	font-weight: 500;
+}
+
+/* ----------------- FOOTER -------------- */
+.footer {
+	background-color: #fbfbfb;
+}
+
+.footer__heading {
+	font-size: 1.4rem;
+	font-weight: 500;
+	margin-top: 40px;
+	color: var(--text-color);
+	margin-bottom: 20px;
+}
+
+.footer__heading-list {
+	list-style: none;
+	padding-left: 0;
+	font-size: 1.2rem;
+	line-height: 1.2rem;
+
+}
+
+.footer__heading-item {
+	margin-bottom: 16px;
+}
+
+.footer__heading-social {
+	text-decoration: none;
+	color: var(--text-color);
+	display: flex;
+}
+
+.footer__heading-link {
+	text-decoration: none;
+	color: var(--text-color);
+	display: flex;
+	align-items: center;
+	line-height: 1.2rem;
+}
+
+.footer__heading-link:hover {
+	color: var(--primary-color);
+}
+
+.footer__heading-icon {
+	font-size: 1.8rem;
+	margin-right: 8px;
+}
+
+.footer__heading-brands {
+	background-color: var(--white-color);
+	padding: 4px;
+	margin: 0 8px 8px 0;
+	box-shadow:  0 1px 1px rgba(0, 0, 0, 0.2);
+	border-radius: 2px;
+}
+
+.footer__heading-brands--img {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 22px;
+	width: 52px;
+	margin-left: 4px;
+}
+
+.footer__download {
+	display: flex;
+	flex-direction: row;
+}
+
+.footer__download-code {
+	margin-right: 12px;
+}
+
+.footer__download-code a {
+	padding-bottom: 0px;
+	margin-bottom: 0;
+}
+
+.footer__download-qr {
+	display: block;
+	padding: 4px;
+	background-color: var(--white-color);
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+	margin: 0;
+}
+
+.footer__download-qr--img {
+	height: 80px;
+	width: 80px;
+	margin: 0;
+	padding: 0;
+}
+
+.footer__download-apps {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.footer__download-apps--link {
+	display: flex;
+	padding: 4px;
+	margin-bottom: 8px;
+	background-color: var(--white-color);
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+	border-radius: 2px;
+}
+
+.footer__download-apps--link:nth-child(3) {
+	margin-bottom: 0;
+}
+
+.footer__download-apps--img {
+	width: 68px;
+	height: 16px;
+}
+
+/* ---------------- POLICY ------------------ */
+.footer__policy {
+	justify-content: space-between;
+	align-items: flex-start;
+	color: #0000008a;
+	font-size: 1.4rem;
+	padding: 30px 0;
+	margin-top: 30px;
+	border-top: 0.2px solid #ccc;
+}
+
+.footer__policy-region {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.footer__policy-nations {
+	display: block;
+	padding: 0 5px;
+	border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.footer__policy-nations:last-child {
+	border: none;
+}
+
+.footer__policy-nations--link {
+	text-decoration: none;
+	color: #0000008a;
+	cursor: pointer;
+}
+
+.footer__policy-nations--link:hover {
+	color: var(--primary-color);
 }
