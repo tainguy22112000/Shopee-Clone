@@ -186,6 +186,7 @@ html {
 	align-items: center;
 	justify-content: space-between;
 	position: relative;
+	
 }
 
 .select-input:hover .select-input__list {
@@ -204,7 +205,9 @@ html {
 	top: 30px;
 	border-radius: 2px;
 	background-color: var(--white-color);
-	padding: 8px 12px
+	padding: 8px 12px;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+	z-index: 1;
 }
 
 .select-input__items {
